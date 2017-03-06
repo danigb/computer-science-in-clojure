@@ -2,6 +2,7 @@
   (:require [clojure.test :refer :all]
             [cs-in-clojure.linked-list :refer :all]))
 
-(deftest linked-list
-  (testing "Create a linked list"
-    (is (= "value" (head (llist "value"))))))
+(deftest linked-list-test
+  (testing "append"
+    (let [list (append (empty) "value")]
+      (is (= "value" (head list))))))
